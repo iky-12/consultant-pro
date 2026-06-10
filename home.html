@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConsultPro — Business Consultant Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><i class="ti ti-briefcase"></i>ConsultPro</div>
+    <div class="nav-links">
+  <button class="menu-trigger" onclick="toggleMenu()">
+    <i class="ti ti-menu-2"></i> Pilih Menu <i class="ti ti-chevron-down"></i>
+  </button>
+  
+  <div class="menu-list" id="mobileMenuList">
+    <button onclick="showPage('home',this); toggleMenu();">Beranda</button>
+    <button onclick="showPage('about',this); toggleMenu();">Tentang</button>
+    <button onclick="showPage('cases',this); toggleMenu();">Studi Kasus</button>
+    <button onclick="showPage('services',this); toggleMenu();">Layanan</button>
+    <button onclick="showPage('testi',this); toggleMenu();">Testimoni</button>
+    <button onclick="showPage('blog',this); toggleMenu();">Insights</button>
+  </div>
+</div>
+  </nav>
+
+  <section id="home" class="active">
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="badge"><i class="ti ti-award" style="font-size:11px;margin-right:4px"></i>Konsultan Bisnis Berpengalaman 15+ Tahun</div>
+        <h1>Membantu UMKM & Perusahaan <span>Scale-Up</span> Melalui Strategi yang Tepat</h1>
+        <p>Kami hadir sebagai mitra strategis bisnis Anda — dari diagnosa masalah, formulasi strategi, hingga implementasi nyata yang menghasilkan pertumbuhan terukur.</p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="showPage('contact',document.querySelector('.nav-cta'))">
+            <i class="ti ti-calendar" style="margin-right:6px"></i>Konsultasi Gratis
+          </button>
+          <button class="btn-outline" onclick="showPage('cases',document.querySelectorAll('.nav-links button')[2])">
+            <i class="ti ti-folder" style="margin-right:6px"></i>Lihat Portofolio
+          </button>
+        </div>
+        <div class="stats-bar">
+          <div class="stat-item"><div class="stat-num">150+</div><div class="stat-lbl">Bisnis Terbantu</div></div>
+          <div class="stat-item"><div class="stat-num">15+</div><div class="stat-lbl">Tahun Pengalaman</div></div>
+          <div class="stat-item"><div class="stat-num">98%</div><div class="stat-lbl">Kepuasan Klien</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clients-strip">
+      <p>Dipercaya oleh</p>
+      <div class="clients-logos">
+        <span>TokoBesar Group</span>
+        <span>MandiriRetail</span>
+        <span>AgriNusa Tbk</span>
+        <span>SwiftLogistic</span>
+        <span>PrimaCafé</span>
+      </div>
+    </div>
+
+    <div class="page-pad">
+      <div class="section-title">Keahlian Utama Kami</div>
+      <div class="section-sub">Solusi komprehensif untuk setiap tantangan bisnis Anda</div>
+      <div class="grid3">
+        <div class="card" style="border-left:3px solid var(--gold)">
+          <i class="ti ti-chart-arrows-vertical" style="font-size:22px;color:var(--gold);margin-bottom:8px;display:block"></i>
+          <div style="font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px">Strategi Bisnis</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6">Formulasi strategi pertumbuhan berbasis data dan analisis pasar mendalam.</div>
+        </div>
+        <div class="card" style="border-left:3px solid #3b82f6">
+          <i class="ti ti-users" style="font-size:22px;color:#3b82f6;margin-bottom:8px;display:block"></i>
+          <div style="font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px">Restrukturisasi SDM</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6">Optimasi struktur organisasi dan pengembangan kapasitas SDM perusahaan.</div>
+        </div>
+        <div class="card" style="border-left:3px solid #10b981">
+          <i class="ti ti-currency-dollar" style="font-size:22px;color:#10b981;margin-bottom:8px;display:block"></i>
+          <div style="font-size:14px;font-weight:600;color:var(--navy);margin-bottom:4px">Efisiensi Keuangan</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6">Audit biaya, restrukturisasi keuangan, dan peningkatan profitabilitas bisnis.</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">© 2026 <span>ConsultPro</span> · Semua hak dilindungi</div>
+  </section>
+
+  <section id="about">
+    <div class="page-header">
+      <div class="badge">Tentang Kami</div>
+      <h2>Kami percaya bahwa setiap bisnis layak mendapat <span>strategi kelas dunia</span></h2>
+    </div>
+    <div class="page-pad">
+      <div class="about-grid">
+        <div>
+          <div class="profile-card">
+            <div class="profile-av">BH</div>
+            <div class="profile-name">Budi Hartanto, MBA</div>
+            <div class="profile-role">Principal Consultant</div>
+            <div style="margin-top:1rem">
+              <span class="cert-badge">CBCP</span>
+              <span class="cert-badge">PMP®</span>
+              <span class="cert-badge">CMA</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:1.5rem">Dengan pengalaman lebih dari 15 tahun di bidang manajemen strategis, saya telah membantu lebih dari 150 perusahaan — mulai dari UMKM lokal hingga korporasi nasional — untuk menemukan akar masalah bisnis mereka dan meraih pertumbuhan yang berkelanjutan.</p>
+          <div style="font-size:16px;font-weight:700;color:var(--navy);margin-bottom:1rem">Perjalanan Karir</div>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-year">2018 – Sekarang</div>
+              <div class="tl-role">Principal Business Consultant</div>
+              <div class="tl-co">ConsultPro Indonesia</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2013 – 2018</div>
+              <div class="tl-role">Senior Strategy Manager</div>
+              <div class="tl-co">McKinsey & Company, Jakarta</div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-year">2009 – 2013</div>
+              <div class="tl-role">Business Analyst</div>
+              <div class="tl-co">Deloitte Consulting Indonesia</div>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:0.5rem">Filosofi Kerja</div>
+          <div class="philosophy">"Diagnosa yang salah menghasilkan obat yang salah. Kami selalu memulai dengan pemahaman mendalam sebelum merekomendasikan solusi apapun."</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">© 2026 <span>ConsultPro</span> · Semua hak dilindungi</div>
+  </section>
+
+  <section id="cases">
+    <div class="page-header">
+      <div class="badge">Studi Kasus</div>
+      <h2>Hasil nyata untuk bisnis <span>nyata</span></h2>
+    </div>
+    <div class="page-pad">
+      <div class="grid2">
+        <div class="case-card">
+          <div class="case-header">
+            <div class="case-label">Ritel & Distribusi</div>
+            <div class="case-title">Turnaround Profitabilitas Jaringan Retail Modern</div>
+          </div>
+          <div class="case-body">
+            <div class="case-step">
+              <div class="step-tag">Situasi</div>
+              <div class="step-text">Klien mengalami penurunan margin keuntungan sebesar 28% dalam 2 tahun akibat inefisiensi rantai pasok dan biaya overhead yang membengkak.</div>
+            </div>
+            <div class="case-step">
+              <div class="step-tag">Tindakan</div>
+              <div class="step-text">Audit operasional menyeluruh, negosiasi ulang kontrak pemasok, dan implementasi sistem manajemen inventori digital.</div>
+            </div>
+            <div class="case-step">
+              <div class="step-tag">Hasil</div>
+              <div class="result-pill"><i class="ti ti-trending-up" style="font-size:12px"></i>Efisiensi biaya naik 35% dalam 6 bulan</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-header" style="background:#1e3a5f">
+            <div class="case-label">Manufaktur</div>
+            <div class="case-title">Transformasi Digital Pabrik Garmen UMKM</div>
+          </div>
+          <div class="case-body">
+            <div class="case-step">
+              <div class="step-tag">Situasi</div>
+              <div class="step-text">Kapasitas produksi mentok di 60% akibat proses manual, tingkat reject tinggi, dan manajemen SDM yang tidak terstruktur.</div>
+            </div>
+            <div class="case-step">
+              <div class="step-tag">Tindakan</div>
+              <div class="step-text">Implementasi SOP produksi, pelatihan SDM berbasis kompetensi, dan digitalisasi alur kerja dengan sistem ERP sederhana.</div>
+            </div>
+            <div class="case-step">
+              <div class="step-tag">Hasil</div>
+              <div class="result-pill"><i class="ti ti-trending-up" style="font-size:12px"></i>Kapasitas produksi meningkat 52%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-header" style="background:#2d1b4e">
+            <div class="case-label">F&B & Kuliner</div>
+            <div class="case-title">Ekspansi Waralaba Kafe Lokal ke 15 Kota</div>
+          </div>
+          <div class="case-body">
+            <div class="case-step">
+              <div class="step-tag">Situasi</div>
+              <div class="step-text">Brand kafe dengan 3 outlet sukses ingin ekspansi namun belum memiliki sistem, SOP, dan model bisnis waralaba yang matang.</div>
+            </div>
+            <div class="case-step">
+              <div class="step-tag">Tindakan</div>
+              <div class="step-text">Penyusunan franchise package lengkap, standarisasi produk & layanan, serta pengembangan sistem seleksi mitra waralaba.</div>
+            </div>
+            <div class="case-step">
+              <div class="step-tag">Hasil</div>
+              <div class="result-pill"><i class="ti ti-trending-up" style="font-size:12px"></i>Berhasil buka 15 outlet baru dalam 18 bulan</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-card">
+          <div class="case-header" style="background:#1a3d2b">
+            <div class="case-label">Agribisnis</div>
+            <div class="case-title">Restrukturisasi Keuangan Koperasi Petani</div>
+          </div>
+          <div class="case-body">
+            <div class="case-step">
+              <div class="step-tag">Situasi</div>
+              <div class="step-text">Koperasi dengan 800 anggota mengalami krisis likuiditas akibat piutang tak tertagih dan manajemen kas yang buruk.</div>
+            </div>
+            <div class="case-step">
+              <div class="step-tag">Tindakan</div>
+              <div class="step-text">Restrukturisasi utang, penerapan sistem manajemen piutang, pelatihan tata kelola keuangan bagi pengurus koperasi.</div>
+            </div>
+            <div class="case-step">
+              <div class="step-tag">Hasil</div>
+              <div class="result-pill"><i class="ti ti-trending-up" style="font-size:12px"></i>Rasio likuiditas sehat dalam 12 bulan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">© 2026 <span>ConsultPro</span> · Semua hak dilindungi</div>
+  </section>
+
+  <section id="services">
+    <div class="page-header">
+      <div class="badge">Layanan Kami</div>
+      <h2>Solusi lengkap untuk <span>setiap tahap bisnis</span></h2>
+    </div>
+    <div class="page-pad">
+      <div class="grid2">
+        <div class="svc-card">
+          <div class="svc-icon"><i class="ti ti-chart-arrows-vertical"></i></div>
+          <h3>Strategi Bisnis & Pertumbuhan</h3>
+          <p>Analisis kompetitif, market entry strategy, model bisnis baru, perencanaan pertumbuhan 3–5 tahun, dan pivot strategy.</p>
+          <div style="margin-top:0.75rem">
+            <span class="tag">Market Analysis</span><span class="tag">Business Model</span><span class="tag">Growth Planning</span>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon"><i class="ti ti-users"></i></div>
+          <h3>Restrukturisasi Organisasi & SDM</h3>
+          <p>Desain struktur organisasi efektif, sistem rekrutmen, manajemen kinerja (KPI), dan pengembangan budaya perusahaan.</p>
+          <div style="margin-top:0.75rem">
+            <span class="tag">Org Design</span><span class="tag">KPI System</span><span class="tag">HR Development</span>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon"><i class="ti ti-currency-dollar"></i></div>
+          <h3>Manajemen Keuangan & Efisiensi Biaya</h3>
+          <p>Audit keuangan, restrukturisasi utang, cash flow management, efisiensi biaya operasional, dan financial modeling.</p>
+          <div style="margin-top:0.75rem">
+            <span class="tag">Financial Audit</span><span class="tag">Cost Efficiency</span><span class="tag">Cash Flow</span>
+          </div>
+        </div>
+
+        <div class="svc-card">
+          <div class="svc-icon"><i class="ti ti-eye"></i></div>
+          <h3>Riset Pasar & Manajemen Risiko</h3>
+          <p>Riset konsumen, analisis tren industri, pemetaan risiko bisnis, dan penyusunan rencana mitigasi yang komprehensif.</p>
+          <div style="margin-top:0.75rem">
+            <span class="tag">Market Research</span><span class="tag">Risk Mapping</span><span class="tag">Industry Trend</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-banner">
+        <div>
+          <h3>Tidak yakin layanan mana yang tepat?</h3>
+          <p>Konsultasi awal gratis 30 menit untuk memahami kebutuhan bisnis Anda.</p>
+        </div>
+        <button class="btn-primary" onclick="showPage('contact',document.querySelector('.nav-cta'))">
+          <i class="ti ti-calendar" style="margin-right:6px"></i>Booking Sekarang
+        </button>
+      </div>
+    </div>
+    <div class="footer">© 2026 <span>ConsultPro</span> · Semua hak dilindungi</div>
+  </section>
+
+  <section id="testi">
+    <div class="page-header">
+      <div class="badge">Testimoni Klien</div>
+      <h2>Apa kata mereka tentang <span>pengalaman bersama kami</span></h2>
+    </div>
+    <div class="page-pad">
+      <div class="grid2">
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <div class="testi-text">Dalam 6 bulan bersama ConsultPro, biaya operasional kami turun drastis dan tim kami jauh lebih produktif. Pendekatan mereka sangat sistematis dan terukur.</div>
+          <div class="testi-author">
+            <div class="avatar">AR</div>
+            <div>
+              <div class="author-name">Andi Rachman</div>
+              <div class="author-role">CEO · TokoBesar Group</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <div class="testi-text">Kami berhasil membuka 8 outlet baru dalam setahun berkat panduan franchise yang disusun ConsultPro. Sangat detail, realistis, dan bisa dieksekusi langsung.</div>
+          <div class="testi-author">
+            <div class="avatar">SR</div>
+            <div>
+              <div class="author-name">Sari Rahayu</div>
+              <div class="author-role">Owner · PrimaCafé</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <div class="testi-text">Restrukturisasi SDM yang mereka lakukan mengubah kultur perusahaan kami. Kini tim lebih terorganisir dan target KPI selalu tercapai tiap kuartal.</div>
+          <div class="testi-author">
+            <div class="avatar">DW</div>
+            <div>
+              <div class="author-name">Dian Wahyuni</div>
+              <div class="author-role">Direktur Operasional · AgriNusa Tbk</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="stars">★★★★★</div>
+          <div class="testi-text">Yang membedakan ConsultPro dari konsultan lain adalah mereka benar-benar hadir sampai implementasi selesai, bukan hanya sebatas laporan PowerPoint.</div>
+          <div class="testi-author">
+            <div class="avatar">FH</div>
+            <div>
+              <div class="author-name">Fajar Hidayat</div>
+              <div class="author-role">Direktur · SwiftLogistic</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">© 2026 <span>ConsultPro</span> · Semua hak dilindungi</div>
+  </section>
+<section id="blog">
+  <div class="page-header">
+    <div class="badge">Insights & Artikel</div>
+    <h2>Strategi dan tren bisnis <span>terbaru untuk Anda</span></h2>
+  </div>
+  
+  <div class="blog-container">
+    <div class="page-pad">
+      <div class="grid3">
+
+        <div class="blog-card">
+          <div class="blog-img" style="color: var(--gold);">
+            <i class="ti ti-trending-up"></i>
+          </div>
+          <div class="blog-content">
+            <span class="blog-cat">Strategi</span>
+            <div class="blog-meta">9 Juni 2026 · 5 Menit Baca</div>
+            <h3 class="blog-title">Cara UMKM Scale-Up di Tahun 2026 Tanpa Modal Besar</h3>
+            <p class="blog-excerpt">Menemukan celah pasar dan memanfaatkan efisiensi operasional untuk mendongkrak profit bisnis Anda.</p>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-img" style="color: #3b82f6;">
+            <i class="ti ti-users"></i>
+          </div>
+          <div class="blog-content">
+            <span class="blog-cat">Manajemen</span>
+            <div class="blog-meta">1 Juni 2026 · 4 Menit Baca</div>
+            <h3 class="blog-title">Menyusun KPI Karyawan yang Adil dan Transparan</h3>
+            <p class="blog-excerpt">Panduan praktis merancang sistem penilaian kinerja agar produktivitas tim meningkat drastis.</p>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-img" style="color: #10b981;">
+            <i class="ti ti-currency-dollar"></i>
+          </div>
+          <div class="blog-content">
+            <span class="blog-cat">Keuangan</span>
+            <div class="blog-meta">25 Mei 2026 · 6 Menit Baca</div>
+            <h3 class="blog-title">Strategi Mengatur Cash Flow Saat Kondisi Pasar Lesu</h3>
+            <p class="blog-excerpt">Langkah mitigasi risiko keuangan dan cara melakukan audit biaya operasional secara mandiri.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="footer">© 2026 <span>ConsultPro</span> · Semua hak dilindungi</div>
+  </div>
+</section>
+ <section id="contact">
+  <div class="page-header">
+    <div class="badge">Hubungi Kami</div>
+    <h2>Mulai transformasi <span>bisnis Anda hari ini</span></h2>
+  </div>
+  
+  <div class="contact-container">
+    <div class="page-pad">
+      <div class="form-box">
+        
+        <form onsubmit="kirimKeBackend(event)">
+          
+          <div class="form-group">
+            <label>Nama Lengkap</label>
+            <input type="text" id="contact-name" required placeholder="Nama Anda...">
+          </div>
+          
+          <div class="form-group">
+            <label>Nama Bisnis / Perusahaan</label>
+            <input type="text" id="contact-company" placeholder="Nama UMKM atau perusahaan (opsional)...">
+          </div>
+
+          <div class="form-group">
+            <label>Tantangan Terbesar Bisnis Anda</label>
+            <textarea id="contact-message" rows="4" required placeholder="Ceritakan singkat masalah omset, SDM, atau operasional bisnis Anda..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">
+             Ajukan Konsultasi Gratis
+          </button>
+          
+        </form>
+
+      </div>
+    </div>
+    <div class="footer">© 2026 <span>ConsultPro</span> · Semua hak dilindungi</div>
+  </div>
+</section>
+  <script src="script.js"></script>
+</body>
+</html>
